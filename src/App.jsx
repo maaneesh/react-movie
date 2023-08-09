@@ -26,25 +26,19 @@ function App() {
   const [movie, setMovie] = useState(null)
 
   const getMovie = async (searchTerm) => {
-
     try {
       const response = await fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${searchTerm}`)
       const data = await response.json();
       setMovie(data)
-
     } catch (error) {
       console.log(error);
-
     }
-
   }
-
    useEffect(()=>{
     getMovie('shrek')
    },[])
 
   return (
-
     <div style ={containerStyle}>
       <Form movieSearch={getMovie} />
       <div style={innerContainer}>

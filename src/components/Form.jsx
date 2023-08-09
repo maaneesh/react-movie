@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 const header = {
     textAlign: "right",
     padding: "10px"
-
 }
 
 function Form({ movieSearch }) {
@@ -30,7 +29,7 @@ function Form({ movieSearch }) {
              <div style={header}>
             <form onSubmit={handleSubmit}>
                 <input type="text" value={form.searchTerm} onChange={handleChange} />
-                <input type="submit" value="submit" />
+                <input type="submit" value="Search" />
             </form>
         </div>
 
